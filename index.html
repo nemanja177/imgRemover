@@ -12,6 +12,12 @@
 		<script type="text/javascript">
 			function fixTheText() {
 				var text = document.getElementById("inputTextBox").value;
+				while(1) {
+					if(text.search('<img style="border: none !important; margin: 0px !important;" src="https://ir-na.amazon-adsystem.com/e') == null) {
+						console.log("nema vise");
+					}
+					
+				}
 				var text2 = text.replace(
 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
 				//<img loading="lavor" class="size-full aligncenter" src="https:\/\/adsystem(.*?) width="123" height="204150" \/\>/, "")
