@@ -22,14 +22,16 @@
 // 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
 							var text = text.replace(
 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0">/, /<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/)
-					}
+							var text2 = text.replace(
+ 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
+							}
 					
 				}
 				/*var text2 = text.replace(
 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
 				//<img loading="lavor" class="size-full aligncenter" src="https:\/\/adsystem(.*?) width="123" height="204150" \/\>/, "")
 				console.log(text);*/
-				document.getElementById("finishedTextBox").value = text;
+				document.getElementById("finishedTextBox").value = text2;
 				//console.log(text2);
 			}
 		</script>
