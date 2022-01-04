@@ -14,6 +14,54 @@
 				var text = document.getElementById("inputTextBox").value;
 				while(1) {
 					if(text.search('<img style="border: none !important; margin: 0px !important;" src="https://ir-na.amazon-adsystem.com/e') == -1) {
+						if(text.search('<img src="https://ir-na.amazon-adsystem.com/e') == -1) {
+							console.log("nema specijalnih");
+							break;
+						} else {
+							var text = text.replace(/<img src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" \/\>/, "")
+						}
+					} else {
+						console.log("Ima jos");
+							var text = text.replace(
+				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
+
+// 							var text = text.replace(
+// 				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0">/, /<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/)
+// 							var text = text.replace(
+//  				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
+							}
+					
+				}
+				/*var text2 = text.replace(
+				/<img style="border: none !important; margin: 0px !important;" src="https:\/\/ir-na.amazon-adsystem.com\/e\/(.*?) alt="" width="1" height="1" border="0" \/\>/, "")
+				//<img loading="lavor" class="size-full aligncenter" src="https:\/\/adsystem(.*?) width="123" height="204150" \/\>/, "")
+				console.log(text);*/
+				document.getElementById("finishedTextBox").value = text;
+				//console.log(text2);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+<!-- <html>
+	<head>
+		<title>IMG remover</title>
+	</head>
+	<body>
+		<h2>Tekst</h2>
+		<textarea id="inputTextBox" name="badText" rows="30" cols="80"></textarea>
+		<br>
+		<button onclick="fixTheText()">Obrisi slike reklama</button>
+		<br>
+		<textarea id="finishedTextBox" rows="30" cols="80"></textarea>
+		<script type="text/javascript">
+			function fixTheText() {
+				var text = document.getElementById("inputTextBox").value;
+				while(1) {
+					if(text.search('<img style="border: none !important; margin: 0px !important;" src="https://ir-na.amazon-adsystem.com/e') == -1) {
 						console.log("nema vise");
 						break;
 					} else {
@@ -36,4 +84,4 @@
 			}
 		</script>
 	</body>
-</html>
+</html> -->
